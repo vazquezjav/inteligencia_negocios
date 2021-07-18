@@ -1,0 +1,12 @@
+ Juan|Quito,Cuenca|Masculino,23|Data_Visualization:60,Tensowflow:200,Proyectos:400|Proyecto1A:JefeDesarrolladorResponsable
+Gabriela|Guayaquil|Femenino,29,|BPM:100|Proyecto1B:Coordinadora
+Javier_Vazquez|Cuenca,Mendez,Macas|Masculino,21|Selenium:50,SCRUM:100,MTCRE:200|Coopexpress:DesarrolladorAdministrador,Tesis:BackendFrontend
+
+load data inpath '/practica/practica.txt' into table empleados_practica;
+
+
+SELECT nombre,sexo_edad.sex AS sexo,sexo_edad.age AS edad, proyecto_cargo['Coopexpress'] AS proyecto_coopexpress, proyecto_cargo['Proyecto1A'] AS proyecto_proyecto1A, proyecto_cargo['Proyecto1B'][0] as proyecto_proyecto1b, proyecto_cargo['Tesis'] AS proyecto_tesis FROM empleados_practica;
+
+
+
+
